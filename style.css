@@ -1,0 +1,332 @@
+/* line 1, ../../Projects/GitHub/Portfolio/scss/_media.scss */
+.nav-button {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  height: 60px;
+  width: 60px;
+  top: 20px;
+  left: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  border: solid 1px #666666;
+  letter-spacing: .05em;
+  color: #666666;
+  text-decoration: double;
+  background-color: rgba(255, 255, 255, 0.507);
+  border-radius: 10px;
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 21, ../../Projects/GitHub/Portfolio/scss/_media.scss */
+  .project-grid {
+    display: block;
+  }
+  /* line 24, ../../Projects/GitHub/Portfolio/scss/_media.scss */
+  .nav-main {
+    display: none;
+  }
+  /* line 27, ../../Projects/GitHub/Portfolio/scss/_media.scss */
+  .nav-button {
+    display: block;
+    z-index: 1;
+  }
+}
+
+/* line 2, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* line 10, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 18, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* line 23, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+h1, h2, p {
+  margin-bottom: 1em;
+  line-height: 1.3em;
+}
+
+/* line 27, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+a {
+  color: #161c2a;
+  text-decoration: none;
+}
+
+/* line 31, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 36, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+.container {
+  /*update @media with mixin? */
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  /* line 36, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 36, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1260px) {
+  /* line 36, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+  .container {
+    width: 1200px;
+  }
+}
+
+/* line 55, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 62, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+.content {
+  margin-top: 6vh;
+  margin-bottom: 4vh;
+}
+
+/* line 67, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+.content-bottom {
+  position: absolute;
+  width: 50%;
+  bottom: 2em;
+}
+
+/* line 73, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+.hidden {
+  display: none;
+}
+
+/* line 77, ../../Projects/GitHub/Portfolio/scss/_layout.scss */
+.background-img {
+  background-color: #cbeed8;
+  background-image: url("img/TextureSeamless.png");
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+/* line 1, ../../Projects/GitHub/Portfolio/scss/_nav.scss */
+nav {
+  text-align: center;
+  min-height: 100%;
+  width: 200px;
+  border-right: solid 3px #52b2cb;
+  background-color: white;
+}
+
+/* line 8, ../../Projects/GitHub/Portfolio/scss/_nav.scss */
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 20px;
+  border-bottom: solid 3px #52b2cb;
+  background-color: inherit;
+}
+
+/* line 15, ../../Projects/GitHub/Portfolio/scss/_nav.scss */
+.nav-list {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+}
+
+/* line 20, ../../Projects/GitHub/Portfolio/scss/_nav.scss */
+li {
+  width: 100%;
+  padding: 1em 0.5em;
+  transition: all .2s;
+}
+
+/* line 24, ../../Projects/GitHub/Portfolio/scss/_nav.scss */
+li:last-child {
+  border-top: solid 3px #52b2cb;
+  border-bottom: solid 3px #52b2cb;
+  font-weight: bold;
+}
+
+/* line 30, ../../Projects/GitHub/Portfolio/scss/_nav.scss */
+li:hover {
+  box-shadow: inset -20px 0px 20px -20px #5b5b5bb5;
+  background-color: #52b2cb;
+}
+
+/* line 33, ../../Projects/GitHub/Portfolio/scss/_nav.scss */
+li:hover a {
+  color: white;
+}
+
+/* line 1, ../../Projects/GitHub/Portfolio/scss/_header.scss */
+.header-main {
+  min-height: 95vh;
+  width: auto;
+  position: relative;
+  color: #161c2a;
+  box-shadow: inset 0px -10px 10px -10px #5b5b5bb5;
+  background-attachment: fixed;
+}
+
+/* line 9, ../../Projects/GitHub/Portfolio/scss/_header.scss */
+.header-content {
+  font-weight: bold;
+  font-size: 1.3rem;
+  position: relative;
+  top: -2.5em;
+}
+
+/* line 2, ../../Projects/GitHub/Portfolio/scss/_projects.scss */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-flow: row;
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* line 11, ../../Projects/GitHub/Portfolio/scss/_projects.scss */
+.placeholder {
+  width: 100%;
+  height: 300px;
+  color: #161c2a;
+  border: dashed 3px #52b2cb;
+  border-radius: 3%;
+  position: relative;
+  top: 0px;
+}
+
+/* line 20, ../../Projects/GitHub/Portfolio/scss/_projects.scss */
+.placeholder:hover, .placeholder:focus {
+  background-color: rgba(182, 182, 182, 0.055);
+  border: solid 3px #52b2cb;
+  box-shadow: 0 10px 10px -10px #5b5b5bb5;
+  transform: scale(102%);
+  top: -2px;
+  transition: all ease 0.3s;
+}
+
+/* line 1, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+.contact-info {
+  color: #161c2a;
+  max-width: 500px;
+}
+
+/* line 6, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+form {
+  width: 100%;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px -10px #5b5b5bb5;
+  max-width: 500px;
+}
+
+/* line 13, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+input, textarea, .btn-submit {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-bottom: 1px solid #5b5b5bb5;
+  border-radius: 3px;
+  padding: 8px;
+  font-size: inherit;
+  color: #161c2a;
+}
+
+/* line 23, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+input:focus, textarea:focus, .btn-submit:focus {
+  border: none;
+  outline: 2px solid #52b2cb;
+  box-shadow: inset 0 7px 10px -10px #5b5b5bb5;
+}
+
+/* line 28, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+input:hover, textarea:hover, .btn-submit:hover {
+  box-shadow: inset 0 7px 10px -10px #5b5b5bb5;
+}
+
+/* line 31, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+textarea {
+  height: 6em;
+  resize: none;
+}
+
+/* line 36, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+.form-grid {
+  display: grid;
+  margin-bottom: 1em;
+  gap: 1em;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* line 42, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+#fi-1 {
+  grid-column: 1/2;
+}
+
+/* line 45, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+#fi-2 {
+  grid-column: 2/3;
+}
+
+/* line 48, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+#fi-3, #fi-4, #fi-5 {
+  grid-column: -1/1;
+}
+
+/* line 52, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+.btn-submit {
+  border: solid 1px #666666;
+  letter-spacing: .05em;
+  color: #666666;
+  width: auto;
+  padding: .5em 2em;
+  text-decoration: double;
+  background-color: white;
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 64, ../../Projects/GitHub/Portfolio/scss/_contact.scss */
+.footer-main {
+  height: 5rem;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  background-attachment: fixed;
+  background-color: #cbeed8;
+  text-align: center;
+  box-shadow: inset 0 10px 10px -10px #5b5b5bb5;
+}
+
+/*# sourceMappingURL=style.css.map */

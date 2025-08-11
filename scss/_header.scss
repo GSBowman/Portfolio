@@ -1,0 +1,14 @@
+.header-main {
+    min-height: 95vh;
+    width: auto;
+    position: relative;
+    color: $color-font-dark;
+    box-shadow: inset 0px -10px 10px -10px $color-shade;
+    background-attachment: fixed;
+}
+.header-content {
+    font-weight: bold;
+    font-size: 1.3rem;
+    position: relative;
+    top: -2.5em;
+}

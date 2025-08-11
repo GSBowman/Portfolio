@@ -1,0 +1,83 @@
+//global styles
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family-primary;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1, h2, p {
+    margin-bottom: 1em;
+    line-height: 1.3em;
+}
+a {
+    color: $color-font-dark;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+//reuseable classes
+.container {                  /*update @media with mixin? */
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+    
+    @media (min-width: 1260px) {
+        width: 1200px;
+    }
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+}
+
+.content-bottom {
+    position: absolute;
+    width: 50%;
+    bottom: 2em;
+}
+
+.hidden {
+    display: none;
+}
+
+.background-img{
+    background-color: $color-bg-alt;
+    background-image: url('img/TextureSeamless.png');
+    background-repeat: repeat;
+    background-size: auto;
+    // background-attachment: fixed;
+}

@@ -1,0 +1,27 @@
+//responsive auto fit grid container
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($ph-size, 1fr));
+    grid-auto-flow: row;
+    gap: 2rem;
+    justify-items: center;
+}
+
+//grid items
+.placeholder {
+    width: 100%;
+    height: $ph-size;
+    color: $color-font-dark;
+    border: dashed 3px $color-primary;
+    border-radius: 3%;
+    position: relative;
+    top: 0px;
+}
+.placeholder:hover, .placeholder:focus {
+    background-color: rgba(182, 182, 182, 0.055);
+    border: solid 3px $color-primary;
+    box-shadow: 0 10px 10px -10px $color-shade;
+    transform: scale(102%);
+    top: -2px;
+    transition: all ease 0.3s;
+}
